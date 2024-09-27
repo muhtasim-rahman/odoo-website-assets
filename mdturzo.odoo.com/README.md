@@ -31,26 +31,9 @@ Here are visual elements of the website enhanced with repository assets. The mod
   <img src="images/website-screenshot-1.png" alt="website-screenshot-1" class="responsive-img">
   <img src="images/website-screenshot-2.png" alt="website-screenshot-2" class="responsive-img">
   <img src="images/website-screenshot-3.png" alt="website-screenshot-3" class="responsive-img">
-  <img src="images/website-screenshot-4.png" alt="website-screenshot-4" class="responsive-img">
 </div>
 
 ---
-
-<style>
-  .responsive-img {
-    display: inline-block;
-    padding: 5px;
-  }
-  @media (max-width: 700px) { 
-    .responsive-img { width: 100%; }
-  }
-  @media (min-width: 701px) and (max-width: 1099px) { 
-    .responsive-img { width: 48%; }
-  }
-  @media (min-width: 1100px) { 
-    .responsive-img { width: 23%; }
-  }
-</style>
 
 ## 📦 How to Use
 
