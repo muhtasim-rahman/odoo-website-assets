@@ -284,17 +284,40 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    function highlightText(text) {
-        const query = searchInput.value.toLowerCase().trim();
-        const queryWords = query.split(/\s+/);
+function highlightText(text) {
+    const query = searchInput.value.toLowerCase().trim();
+    const queryWords = query.split(/\s+/);
 
-        queryWords.forEach((word) => {
-            const regex = new RegExp(word, "gi");
-            text = text.replace(regex, '<span class="highlight">$&</span>');
+    // Create a temporary element to hold the content
+    const tempElement = document.createElement("div");
+    tempElement.innerHTML = text;
+
+    // Recursively traverse child nodes and apply highlighting only to text nodes
+    function traverseAndHighlight(element) {
+        element.childNodes.forEach((node) => {
+            if (node.nodeType === Node.TEXT_NODE) {
+                let nodeText = node.textContent.toLowerCase();
+                queryWords.forEach((word) => {
+                    if (nodeText.includes(word)) {
+                        const regex = new RegExp(`(${word})`, "gi");
+                        const highlightedText = node.textContent.replace(regex, '<span class="highlight">$1</span>');
+                        const tempDiv = document.createElement("div");
+                        tempDiv.innerHTML = highlightedText;
+                        node.replaceWith(...tempDiv.childNodes);
+                    }
+                });
+            } else if (node.nodeType === Node.ELEMENT_NODE) {
+                traverseAndHighlight(node); // Traverse deeper into child nodes
+            }
         });
-
-        return text;
     }
+
+    traverseAndHighlight(tempElement);
+
+    // Return the modified inner HTML
+    return tempElement.innerHTML;
+}
+
 
     function navigateToContent(index) {
         const rows = document.querySelectorAll(".s_media_list_item");
