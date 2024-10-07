@@ -286,42 +286,78 @@
 
 /* Search Bar */
 .search-bar {
-  position: relative;
-  margin: 20px;
+    position: relative;
+    margin: 20px;
 }
 
+/* Clear Button */
+.clear-btn {
+    position: absolute;
+    left: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 20px 0 0 20px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; 
+    height: 44px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.clear-btn:hover {
+    color: #fff;
+    background-color: #FF6666;
+}
+
+.clear-btn i {
+    font-size: 16px; /* Adjust icon size */
+}
+
+/* Search Input */
 .search-bar input[type="text"] {
-  width: 100%;
-  padding: 10px 60px 10px 20px;
-  font-size: 16px;
-  border-radius: 20px;
-  border: 1px solid #fff;
+    width: 100%;
+    padding: 10px 50px; 
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
 }
 
 .search-bar input[type="text"]:focus {
-  border: 1px solid #4958a3;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #4958A3; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-.search-bar button {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 60px;
-  background-color: #4958a3;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-left: none;
-  border: 1px solid #4958a3;
+/* Search Button */
+.search-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50px; /* Width of the search button */
+    background-color: #4958A3; /* Blue background */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none; /* Remove border */
+    color: white; /* White icon */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease; /* Transition effect */
 }
 
-.search-bar button i {
-  color: #fff;
+.search-btn:hover {
+    background-color: #6db4d9; /* Lighter blue on hover */
+}
+
+.search-btn i {
+    font-size: 18px; /* Adjust icon size */
 }
 
 /* Search Results */
