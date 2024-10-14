@@ -1,12 +1,3 @@
-html, body {
-	height: 100%;
-}
-
-body {
-	background: #333;
-	margin: 0;
-}
-
 #ptr {
 	position: absolute;
 	top: 0;
