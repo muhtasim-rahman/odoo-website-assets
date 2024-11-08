@@ -159,11 +159,8 @@
 
 .navbar .nav-link:hover,
 .navbar .dropdown-item:hover {
-.navbar.rounded-pill .nav-link:hover,
-.navbar.rounded-pill .dropdown-item:hover {
   background-color: rgba(73, 88, 163, 0.25);
   border-radius: 200px;
-  border-radius: 5px;
   transition: 0.4s;
 }
   
