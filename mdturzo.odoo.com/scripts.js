@@ -1,5 +1,10 @@
 /* ---------------------------------( Navbar positioning script )-------------------------------*/
-// Especially for the 'mega nav icon' and 'search icon' to be aligned at the right side of the navbar.
+// Especially for the 'mega nav icon' 'Notification Icon' and 'search icon' to be aligned at the right side of the navbar.
+
+const element = document.querySelector('.navbar .navbar-nav.justify-content-end .oe_structure .container a:nth-child(1)');
+if (element && element.classList.contains('btn-primary')) {
+  element.classList.remove('btn-primary');
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   const buttonPrimary = document.querySelector(
@@ -10,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   const toggle = document.querySelector(".o_mega_menu_toggle");
   const navbar = document.querySelector(".navbar");
-  const userMenu = document.querySelector(".dropdown-menu.js_usermenu"); // User menu to check sign-in status
+  const userMenu = document.querySelector(".dropdown-menu.js_usermenu");
 
   function positionToggle() {
     // Temporarily disable transition
@@ -42,38 +47,38 @@ document.addEventListener("DOMContentLoaded", function () {
     // If signed in, add hover effects for both buttons
     buttonPrimary.addEventListener("mouseenter", function () {
       toggle.style.transform = `translateX(${
-        navbar.offsetWidth - 794 - 10
+        navbar.offsetWidth - 834 - 10
       }px) translateY(0)`;
     });
 
     buttonPrimary.addEventListener("mouseleave", function () {
       toggle.style.transform = `translateX(${
-        navbar.offsetWidth - 794
+        navbar.offsetWidth - 834
       }px) translateY(0)`;
     });
 
     buttonSecondary.addEventListener("mouseenter", function () {
       toggle.style.transform = `translateX(${
-        navbar.offsetWidth - 794 - 30
+        navbar.offsetWidth - 834 - 30
       }px) translateY(0)`;
     });
 
     buttonSecondary.addEventListener("mouseleave", function () {
       toggle.style.transform = `translateX(${
-        navbar.offsetWidth - 794
+        navbar.offsetWidth - 834
       }px) translateY(0)`;
     });
   } else {
     // If not signed in, add hover effect for the contact button (buttonPrimary)
     buttonPrimary.addEventListener("mouseenter", function () {
       toggle.style.transform = `translateX(${
-        navbar.offsetWidth - 839 - 8
+        navbar.offsetWidth - 879 - 8
       }px) translateY(0)`;
     });
 
     buttonPrimary.addEventListener("mouseleave", function () {
       toggle.style.transform = `translateX(${
-        navbar.offsetWidth - 839
+        navbar.offsetWidth - 879
       }px) translateY(0)`;
     });
   }
@@ -82,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("load", positionToggle);
   window.addEventListener("resize", positionToggle);
 });
+
 
 /* --------------------------------( Custom Search bar scripts )--------------------------------- */
 
