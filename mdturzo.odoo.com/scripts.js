@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbar = document.querySelector(".navbar");
   const userMenu = document.querySelector(".dropdown-menu.js_usermenu");
 
+        toggle.style.transform = `translateX(126px) translateY(0)`;
+
   function positionToggle() {
     // Temporarily disable transition
     toggle.style.transition = "none";
