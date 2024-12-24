@@ -134,6 +134,7 @@
 
 .navbar
   .navbar-nav
+  section.oe_unremovable.oe_unmovable.s_text_block
   .container {
     margin-bottom: -8px;
 }
@@ -141,6 +142,7 @@
 
 .navbar
   .navbar-nav
+  section.oe_unremovable.oe_unmovable.s_text_block
   .container
   a:nth-child(1) {
   overflow: hidden;
@@ -154,6 +156,7 @@
 
 .navbar
   .navbar-nav
+  section.oe_unremovable.oe_unmovable.s_text_block
   .container
   a:nth-child(1)
   span {
@@ -166,6 +169,7 @@
 @media (max-width: 991px) {
 .navbar
   .navbar-nav
+  section.oe_unremovable.oe_unmovable.s_text_block
   .container
   a:nth-child(1){
   display: none !important;
