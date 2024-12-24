@@ -1,3 +1,10 @@
+::-moz-selection {
+  background: #54608475;
+}
+
+::selection {
+  background: #54608475;
+}
 
 /* --------------------------------( Custom navbar design )-------------------------------- */
 
@@ -123,6 +130,48 @@
   }
 }
 
+/* --------- # Notification icon designs ---------*/
+
+.navbar
+  .navbar-nav
+  .container {
+    margin-bottom: -8px;
+}
+
+
+.navbar
+  .navbar-nav
+  .container
+  a:nth-child(1) {
+  overflow: hidden;
+  height: 38px;
+  width: 38px;
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #4958A3;
+  vertical-align: middle;
+}
+
+.navbar
+  .navbar-nav
+  .container
+  a:nth-child(1)
+  span {
+  font-size: 20px;
+  padding-top: 2px;
+  color: #4958A3;
+}
+
+
+@media (max-width: 991px) {
+.navbar
+  .navbar-nav
+  .container
+  a:nth-child(1){
+  display: none !important;
+}
+}
+
 /*--------- # Navbar Brand and Mobile Buttons -------*/
 @media (max-width: 991px) {
   #top .navbar .navbar-brand {
@@ -156,16 +205,11 @@
 }
 
 /*--------- # Hover Effects -------*/
-
 .navbar .nav-link:hover,
 .navbar .dropdown-item:hover {
   background-color: rgba(73, 88, 163, 0.25);
   border-radius: 200px;
   transition: 0.4s;
-}
-  
-.navbar .o_mega_menu .nav-link:hover,{
-  border-radius: 5px;
 }
 
 .navbar .o_mega_menu .o_colored_level.col-lg-3 span {
@@ -291,78 +335,42 @@
 
 /* Search Bar */
 .search-bar {
-    position: relative;
-    margin: 20px;
+  position: relative;
+  margin: 20px;
 }
 
-/* Clear Button */
-.clear-btn {
-    position: absolute;
-    left: 1px;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    border-radius: 20px 0 0 20px;
-    color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px; 
-    height: 44px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-    transition: background-color 0.3s ease, transform 0.3s ease; 
-}
-
-.clear-btn:hover {
-    color: #fff;
-    background-color: #FF6666;
-}
-
-.clear-btn i {
-    font-size: 16px; /* Adjust icon size */
-}
-
-/* Search Input */
 .search-bar input[type="text"] {
-    width: 100%;
-    padding: 10px 50px; 
-    font-size: 16px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    outline: none;
+  width: 100%;
+  padding: 10px 60px 10px 20px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 1px solid #fff;
 }
 
 .search-bar input[type="text"]:focus {
-    border: 1px solid #4958A3; 
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid #4958a3;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Search Button */
-.search-btn {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 50px; /* Width of the search button */
-    background-color: #4958A3; /* Blue background */
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border: none; /* Remove border */
-    color: white; /* White icon */
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease; /* Transition effect */
+.search-bar button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  background-color: #4958a3;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: none;
+  border: 1px solid #4958a3;
 }
 
-.search-btn:hover {
-    background-color: #6db4d9; /* Lighter blue on hover */
-}
-
-.search-btn i {
-    font-size: 18px; /* Adjust icon size */
+.search-bar button i {
+  color: #fff;
 }
 
 /* Search Results */
