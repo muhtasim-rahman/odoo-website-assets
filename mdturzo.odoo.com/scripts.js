@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!userMenu) {
     // Not signed in
     toggle.style.transform = `translateX(${
-      navbarWidth - 877 - 43 // Adjusted to move 43px further left
+      navbarWidth - 877 // Adjusted to move 43px further left
     }px) translateY(0)`;
   } else {
     // Signed in
