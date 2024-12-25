@@ -27,13 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!userMenu) {
       // Not signed in
       toggle.style.transform = `translateX(${
-        navbarWidth - 877
+        navbarWidth - 937
         
       }px) translateY(0)`;
     } else {
       // Signed in
       toggle.style.transform = `translateX(${
-        navbarWidth - 834
+        navbarWidth - 894
       }px) translateY(0)`;
     }
   
