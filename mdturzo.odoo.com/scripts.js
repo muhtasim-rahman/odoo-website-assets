@@ -23,18 +23,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Get the width of the navbar
     const navbarWidth = navbar.offsetWidth;
-    
-  if (!userMenu) {
-    // Not signed in
-    toggle.style.transform = `translateX(${
-      navbarWidth - 877 // Adjusted to move 43px further left
-    }px) translateY(0)`;
-  } else {
-    // Signed in
-    toggle.style.transform = `translateX(${
-      navbarWidth - 834 // Matches the signed-in leave position
-    }px) translateY(0)`;
-  }
+
+    if (userMenu) {
+  // Signed in
+  toggle.style.transform = `translateX(${
+    navbarWidth - 834 
+  }px) translateY(0)`;
+} else {
+  // Not signed in
+  toggle.style.transform = `translateX(${
+    navbarWidth - 877
+  }px) translateY(0)`;
+}
   
 
     // Force a reflow to apply the styles
