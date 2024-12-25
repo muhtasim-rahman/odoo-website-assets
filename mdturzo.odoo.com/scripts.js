@@ -24,17 +24,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get the width of the navbar
     const navbarWidth = navbar.offsetWidth;
     
-    if (!userMenu) {
+        if (!userMenu) {
       // Not signed in: position 83px to the left
       toggle.style.transform = `translateX(${
-        navbarWidth - 874
+        navbarWidth - 914
       }px) translateY(0)`;
     } else {
       // Signed in: position like before
       toggle.style.transform = `translateX(${
-        navbarWidth - 8734
+        navbarWidth - 774
       }px) translateY(0)`;
     }
+  
 
     // Force a reflow to apply the styles
     toggle.offsetHeight;
