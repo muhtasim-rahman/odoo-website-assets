@@ -21,20 +21,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Temporarily disable transition
     toggle.style.transition = "none";
 
-    toggle.style.transform = `translateX(126px) translateY(0)`;
-
     // Get the width of the navbar
     const navbarWidth = navbar.offsetWidth;
-
+    
     if (!userMenu) {
-      // Not signed in: position 43px to the left
+      // Not signed in: position 83px to the left
       toggle.style.transform = `translateX(${
-        navbarWidth - 837
+        navbarWidth - 877
       }px) translateY(0)`;
     } else {
       // Signed in: position like before
       toggle.style.transform = `translateX(${
-        navbarWidth - 794
+        navbarWidth - 834
       }px) translateY(0)`;
     }
 
