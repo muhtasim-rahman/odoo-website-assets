@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       // Signed in: position like before
       toggle.style.transform = `translateX(${
-        navbarWidth - 834
+        navbarWidth - 874
       }px) translateY(0)`;
     }
 
