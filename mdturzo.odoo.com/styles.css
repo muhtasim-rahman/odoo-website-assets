@@ -172,7 +172,9 @@
   section.oe_unremovable.oe_unmovable.s_text_block
   .container
   a:nth-child(1){
-  display: none !important;
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 }
 
