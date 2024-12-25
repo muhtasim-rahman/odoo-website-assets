@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!userMenu) {
       // Not signed in: position 83px to the left
       toggle.style.transform = `translateX(${
-        navbarWidth - 877
+        navbarWidth - 834
       }px) translateY(0)`;
     } else {
       // Signed in: position like before
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toggle.offsetHeight;
 
     // Re-enable the transition
-    toggle.style.transition = "transform 0.21s ease";
+    toggle.style.transition = "transform 0.22s ease";
   }
 
   if (userMenu) {
