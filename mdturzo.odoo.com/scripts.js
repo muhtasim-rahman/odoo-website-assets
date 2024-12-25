@@ -26,15 +26,10 @@ document.addEventListener("DOMContentLoaded", function () {
     
         if (!userMenu) {
       // Not signed in
-      toggle.style.transform = `translateX(${
-        navbarWidth - 937
-        
-      }px) translateY(0)`;
+      toggle.style.transform = `translateX(-80px) translateY(0)`;
     } else {
       // Signed in
-      toggle.style.transform = `translateX(${
-        navbarWidth - 894
-      }px) translateY(0)`;
+      toggle.style.transform = `translateX(-126px) translateY(0)`;
     }
   
 
