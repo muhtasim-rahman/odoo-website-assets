@@ -27,7 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!userMenu) {
       // Not signed in: position 83px to the left
       toggle.style.transform = `translateX(${
-        navbarWidth - 914
+        navbarWidth - 834
+        
       }px) translateY(0)`;
     } else {
       // Signed in: position like before
