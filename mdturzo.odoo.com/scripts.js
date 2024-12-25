@@ -25,15 +25,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const navbarWidth = navbar.offsetWidth;
     
         if (!userMenu) {
-      // Not signed in: position 83px to the left
+      // Not signed in
       toggle.style.transform = `translateX(${
-        navbarWidth - 834
+        navbarWidth - 877
         
       }px) translateY(0)`;
     } else {
-      // Signed in: position like before
+      // Signed in
       toggle.style.transform = `translateX(${
-        navbarWidth - 774
+        navbarWidth - 834
       }px) translateY(0)`;
     }
   
