@@ -48,38 +48,38 @@ document.addEventListener("DOMContentLoaded", function () {
     // If signed in, add hover effects for both buttons
     buttonPrimary.addEventListener("mouseenter", function () {
       toggle.style.transform = `translateX(${
-        navbar.offsetWidth - 834 - 10
+        navbar.offsetWidth - 840 - 10
       }px) translateY(0)`;
     });
 
     buttonPrimary.addEventListener("mouseleave", function () {
       toggle.style.transform = `translateX(${
-        navbar.offsetWidth - 834
+        navbar.offsetWidth - 840
       }px) translateY(0)`;
     });
 
     buttonSecondary.addEventListener("mouseenter", function () {
       toggle.style.transform = `translateX(${
-        navbar.offsetWidth - 834 - 30
+        navbar.offsetWidth - 840 - 30
       }px) translateY(0)`;
     });
 
     buttonSecondary.addEventListener("mouseleave", function () {
       toggle.style.transform = `translateX(${
-        navbar.offsetWidth - 834
+        navbar.offsetWidth - 840
       }px) translateY(0)`;
     });
   } else {
     // If not signed in, add hover effect for the contact button (buttonPrimary)
     buttonPrimary.addEventListener("mouseenter", function () {
       toggle.style.transform = `translateX(${
-        navbar.offsetWidth - 879 - 8
+        navbar.offsetWidth - 885 - 8
       }px) translateY(0)`;
     });
 
     buttonPrimary.addEventListener("mouseleave", function () {
       toggle.style.transform = `translateX(${
-        navbar.offsetWidth - 879
+        navbar.offsetWidth - 885
       }px) translateY(0)`;
     });
   }
