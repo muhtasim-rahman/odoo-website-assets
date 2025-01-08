@@ -267,7 +267,7 @@ function attachMenuToggleListeners() {
     toggle.addEventListener("click", (e) => {
       e.stopPropagation();
       closeAllMenus();
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
       menu.classList.toggle("menu-open");
     });
 
