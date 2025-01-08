@@ -127,54 +127,6 @@
   }
 }
 
-/* --------- # Notification icon designs ---------*/
-
-.navbar
-  .navbar-nav
-  section.oe_unremovable.oe_unmovable.s_text_block
-  .container {
-    margin-bottom: -8px;
-}
-
-
-.navbar
-  .navbar-nav
-  section.oe_unremovable.oe_unmovable.s_text_block
-  .container
-  a:nth-child(1) {
-  overflow: hidden;
-  height: 38px;
-  width: 38px;
-  padding: 5px;
-  background-color: #fff;
-  border: 1px solid #4958A3;
-  vertical-align: middle;
-}
-
-.navbar
-  .navbar-nav
-  section.oe_unremovable.oe_unmovable.s_text_block
-  .container
-  a:nth-child(1)
-  span {
-  font-size: 20px;
-  padding-top: 2px;
-  color: #4958A3;
-}
-
-
-@media (max-width: 991px) {
-.navbar
-  .navbar-nav
-  section.oe_unremovable.oe_unmovable.s_text_block
-  .container
-  a:nth-child(1){
-    display: block;
-    width: 100%;
-    text-align: center;
-}
-}
-
 /*--------- # Navbar Brand and Mobile Buttons -------*/
 @media (max-width: 991px) {
   #top .navbar .navbar-brand {
