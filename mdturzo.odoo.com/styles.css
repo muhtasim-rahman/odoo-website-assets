@@ -245,9 +245,6 @@
 
 
 /*--------- # Account icon design -------*/
-
-
-  .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill
   
 .navbar .btn.rounded-circle.text-reset,
   .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill {
@@ -263,11 +260,15 @@
   top: 10px;
 }
 
-  .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill  i {
+  .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill i {
   margin-left: -7px;
 }
 
-  .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill ::after {
+  .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill i:hover {
+  margin-left: -30px;
+}
+
+  .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill::after {
   transition: 0.3s;
   font-size: 22px;
   position: absolute;
@@ -276,24 +277,15 @@
   opacity: 0;
 }
 
-/*.navbar .btn.rounded-circle.btn-outline-secondary.dropdown-toggle::after {
-    transition: 0.3s;
-    content: "\f0dd";
-    font-family: "Font Awesome 5 Free";
-    font-size: 20px;
-    position: absolute;
-    top: -8px;
-    right: 9px;
-    opacity: 0;
-}*/
-
-  .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill :hover {
+  .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill:hover {
   width: 65px;
 }
 
-  .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill :hover::after {
+  .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill:hover::after {
   opacity: 1;
+  
 }
+
 /* -------------------------------------( Scrollbar Design )------------------------------------ */
 
 /* Scrollbar for Webkit browsers (Chrome, Safari) */
@@ -844,7 +836,7 @@
 .btn.btn-primary.btn-lg::after,
 .btn.btn-secondary.btn-lg::after {
   font-size: 18px;
-  top: 11px;
+  top: 22px;
 }
 
 /**********/
