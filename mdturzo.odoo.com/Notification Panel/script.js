@@ -360,7 +360,7 @@ function renderNotificationHeader() {
     e.stopPropagation();
     closeAllMenus();
     settingsMenu.style.display =
-      settingsMenu.style.display === "block" ? "none" : "block";
+      settingsMenu.style.display === "flex" ? "none" : "flex";
     settingsMenu.classList.toggle("menu-open");
   });
 
@@ -515,7 +515,7 @@ document.querySelectorAll(".menu-toggle").forEach((button) => {
     event.stopPropagation();
     const menu = button.nextElementSibling;
     if (menu) {
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
       menu.classList.toggle("menu-open");
     }
   });
