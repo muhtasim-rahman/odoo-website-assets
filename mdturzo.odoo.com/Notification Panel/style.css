@@ -1,3 +1,53 @@
+/* --------- # Notification icon designs for only (mdturzo.odoo.com) --------- */
+.navbar
+  .navbar-nav
+  section.oe_unremovable.oe_unmovable.s_text_block
+  .container {
+    margin-bottom: -8px;
+    overflow: visible; /* Allow children to overflow the parent container */
+}
+
+.navbar
+  .navbar-nav
+  section.oe_unremovable.oe_unmovable.s_text_block
+  .container
+  .btn:nth-child(1) {
+    height: 38px;
+    width: 38px;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #6B8FB8;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1000;
+    overflow: visible; /* Allow contents to overflow this element */
+}
+
+.notification-icon {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    z-index: 5000; /* Ensure this appears on top of other elements */
+}
+
+.navbar
+  .navbar-nav
+  section.oe_unremovable.oe_unmovable.s_text_block
+  .container
+  .btn:nth-child(1)
+  i {
+    font-size: 20px;
+}
+
+.navbar
+  .navbar-nav
+  section.oe_unremovable.oe_unmovable.s_text_block
+  .container
+  .btn:nth-child(1)
+  span {
+    font-size: 10px;
+}
+
 /* TODO: -------------------------------------- ( Notification Icon )  ---------------- |*/
 .notification-icon {
   position: relative;
@@ -9,7 +59,7 @@
 .unread-badge {
   position: absolute;
   top: -5px;
-  right: -10px;
+  right: -8px;
   background: red;
   color: white;
   font-size: 11px;
