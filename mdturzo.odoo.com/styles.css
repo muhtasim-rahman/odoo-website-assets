@@ -24,14 +24,11 @@
 
   .o_mega_menu_toggle {
     background-color: #f2f2f2;
+    transition: transform 0.21s ease;
   }
 
   .o_mega_menu_toggle:hover {
     background-color: #e5e5e5;
-  }
-
-  .o_mega_menu_toggle {
-    transition: transform 0.21s ease;
   }
 
   .dropdown.o_no_autohide_item {
@@ -215,7 +212,7 @@
 .navbar .dropdown-item:hover {
   background-color: rgba(73, 88, 163, 0.25);
   border-radius: 200px;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 .navbar .o_mega_menu .o_colored_level.col-lg-3 span {
@@ -246,6 +243,57 @@
   transition: border 0.05s linear;
 }
 
+
+/*--------- # Account icon design -------*/
+
+
+  .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill
+  
+.navbar .btn.rounded-circle.text-reset,
+  .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill {
+  transition: 0.3s;
+  width: 36px;
+  height: 36px;
+  position: relative;
+}
+
+.navbar .btn.rounded-circle.text-reset i {
+  position: absolute;
+  left: 8px;
+  top: 10px;
+}
+
+  .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill  i {
+  margin-left: -7px;
+}
+
+  .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill ::after {
+  transition: 0.3s;
+  font-size: 22px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  opacity: 0;
+}
+
+/*.navbar .btn.rounded-circle.btn-outline-secondary.dropdown-toggle::after {
+    transition: 0.3s;
+    content: "\f0dd";
+    font-family: "Font Awesome 5 Free";
+    font-size: 20px;
+    position: absolute;
+    top: -8px;
+    right: 9px;
+    opacity: 0;
+}*/
+
+  .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill :hover {
+  width: 65px;
+}
+
+  .navbar a.dropdown-toggle.nav-link.align-items-center.rounded-pill :hover::after {
+  opacity: 1;
+}
 /* -------------------------------------( Scrollbar Design )------------------------------------ */
 
 /* Scrollbar for Webkit browsers (Chrome, Safari) */
@@ -770,7 +818,7 @@
 
 .btn.btn-primary.btn-lg:hover,
 .btn.btn-secondary.btn-lg:hover {
-  padding-right: 35px;
+  padding-right: 45px;
 }
 
 /*********/
@@ -815,54 +863,6 @@
 .btn.btn-primary.btn-lg:hover::after,
 .btn.btn-secondary.btn-lg:hover::after {
   right: 16px;
-}
-
-/*--------- # Account icon design -------*/
-
-.navbar .btn.rounded-circle.text-reset,
-.navbar .btn.rounded-circle.btn-outline-secondary.dropdown-toggle {
-  transition: 0.3s;
-  width: 36px;
-  height: 36px;
-  position: relative;
-}
-
-.navbar .btn.rounded-circle.text-reset i {
-  position: absolute;
-  left: 8px;
-  top: 10px;
-}
-
-.navbar .btn.btn-outline-secondary.dropdown-toggle i {
-  margin-left: -7px;
-}
-
-.navbar .btn.rounded-circle.btn-outline-secondary.dropdown-toggle::after {
-  transition: 0.3s;
-  font-size: 22px;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  opacity: 0;
-}
-
-/*.navbar .btn.rounded-circle.btn-outline-secondary.dropdown-toggle::after {
-    transition: 0.3s;
-    content: "\f0dd";
-    font-family: "Font Awesome 5 Free";
-    font-size: 20px;
-    position: absolute;
-    top: -8px;
-    right: 9px;
-    opacity: 0;
-}*/
-
-.navbar .btn.rounded-circle.btn-outline-secondary.dropdown-toggle:hover {
-  width: 65px;
-}
-
-.navbar .btn.rounded-circle.btn-outline-secondary.dropdown-toggle:hover::after {
-  opacity: 1;
 }
 
 /*--------------------------( Floating Share button design )------------------------------*/
