@@ -1,3 +1,68 @@
+//TODO: ----------------------- ( Scripts for adding notification pannel on 'mdturzo.odoo.com' ) -------|
+
+// Replace the first <a> tag with a <div>
+const targetElement = document.querySelector(
+  '.navbar .navbar-nav section.oe_unremovable.oe_unmovable.s_text_block .container a:nth-child(1)'
+);
+
+if (targetElement) {
+    // Create a new <div> element
+    const newDiv = document.createElement('div');
+
+    // Copy the classes and innerHTML from the <a> tag to the new <div>
+    newDiv.className = targetElement.className;
+    newDiv.innerHTML = `
+      <div class="notification-icon">
+        <i class="fas fa-bell"></i>
+        <span id="unreadCount" class="unread-badge">0</span>
+        <div class="notification-panel" id="notificationPanel">
+          <div class="loader"></div>
+          <div class="loader-watermark"></div>
+        </div>
+      </div>
+    `;
+
+    // Replace the <a> element with the new <div>
+    targetElement.replaceWith(newDiv);
+
+    console.log("The <a> tag was successfully replaced with a <div>.");
+} else {
+    console.error('Target <a> element not found.');
+}
+
+// Add functionality to toggle and close the notification panel
+document.addEventListener('DOMContentLoaded', () => {
+    // Select the notification div and notification panel
+    const notificationDiv = document.querySelector(
+      '.navbar .navbar-nav section.oe_unremovable.oe_unmovable.s_text_block .container div:nth-child(1)'
+    );
+    const notificationPanel = document.querySelector('#notificationPanel');
+
+    // Function to toggle the active class on the notification panel
+    const toggleNotificationPanel = (event) => {
+        event.stopPropagation(); // Prevent event from bubbling to the document
+        notificationPanel.classList.toggle('active');
+    };
+
+    // Function to close the notification panel when clicking outside of it
+    const closeNotificationPanel = () => {
+        if (notificationPanel.classList.contains('active')) {
+            notificationPanel.classList.remove('active');
+        }
+    };
+
+    // Add click event listener to the notification div
+    notificationDiv.addEventListener('click', toggleNotificationPanel);
+
+    // Add click event listener to the document to close the panel when clicking outside
+    document.addEventListener('click', closeNotificationPanel);
+
+    // Prevent closing the panel when clicking inside it
+    notificationPanel.addEventListener('click', (event) => {
+        event.stopPropagation();
+    });
+});
+
 //TODO: ----------------------------------- ( Constants and Variables ) -------|
 const apiURL =
   "https://script.google.com/macros/s/AKfycbzrmZ_At4CPKVY1Fjzw3GWxONpsCGfJwasEFz3DGa924ZRuwkG9RKi0hrFkXYX9p51y/exec";
