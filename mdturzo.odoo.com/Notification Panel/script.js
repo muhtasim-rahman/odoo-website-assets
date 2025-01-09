@@ -1,5 +1,4 @@
 //TODO: ----------------------- ( Scripts for adding notification pannel on 'mdturzo.odoo.com' ) -------|
-
 // Replace the first <a> tag with a <div>
 const targetElement = document.querySelector(
   '.navbar .navbar-nav section.oe_unremovable.oe_unmovable.s_text_block .container a:nth-child(1)'
@@ -11,7 +10,7 @@ if (targetElement) {
 
     // Copy the classes and innerHTML from the <a> tag to the new <div>
     newDiv.className = targetElement.className;
-    newDiv.innerHTML = `
+    newDiv.innerHTML = 
       <div class="notification-icon">
         <i class="fas fa-bell"></i>
         <span id="unreadCount" class="unread-badge">0</span>
@@ -20,7 +19,7 @@ if (targetElement) {
           <div class="loader-watermark"></div>
         </div>
       </div>
-    `;
+    ;
 
     // Replace the <a> element with the new <div>
     targetElement.replaceWith(newDiv);
@@ -30,7 +29,7 @@ if (targetElement) {
     console.error('Target <a> element not found.');
 }
 
-// Add functionality to toggle and close the notification panel
+// ------  Add functionality to toggle and close the notification panel ------
 document.addEventListener('DOMContentLoaded', () => {
     // Select the notification div and notification panel
     const notificationDiv = document.querySelector(
