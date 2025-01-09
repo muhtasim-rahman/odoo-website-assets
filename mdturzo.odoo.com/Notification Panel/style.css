@@ -23,7 +23,6 @@
     overflow: visible; /* Allow contents to overflow this element */
 }
 
-
 /* TODO: -------------------------------------- ( Notification Icon )  ---------------- |*/
 .notification-icon {
   position: relative;
@@ -51,6 +50,45 @@
 /* Show unread badge only when there are notifications */
 .unread-badge.active {
   display: inline-block;
+}
+
+.navbar .navbar-nav section.oe_unremovable.oe_unmovable.s_text_block .container a:nth-child(1) i {
+    color: #6B8FB8;
+  }
+
+@media (max-width: 991px) {
+  .navbar .navbar-nav.gap-2 li:nth-child(2) {
+    margin-bottom: -22.5px;
+    z-index: 3000;
+  }
+
+  .navbar .navbar-nav.gap-2 li:nth-child(2) a {
+    padding: 8px 10px;
+  }
+
+  .navbar .navbar-nav section.oe_unremovable.oe_unmovable.s_text_block .container a:nth-child(1) {
+    display: block;
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .unread-badge {
+    display: none !important;
+    top: -1.5px;
+    right: -1.5px;
+    height: 30px;
+    width: 30px;
+    font-size: 16px;
+  }
+
+  .navbar .navbar-nav section.oe_unremovable.oe_unmovable.s_text_block .container a:nth-child(1) i::after {
+    content: "Notifications";
+    padding-left: 10px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    vertical-align: middle;
+    color: #6B8FB8;
+  }
 }
 
 /* TODO: -------------------------------------- ( Notification Panel )  ---------------- |*/
