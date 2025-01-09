@@ -10,7 +10,7 @@ if (targetElement) {
 
     // Copy the classes and innerHTML from the <a> tag to the new <div>
     newDiv.className = targetElement.className;
-    newDiv.innerHTML = 
+    newDiv.innerHTML = `
       <div class="notification-icon">
         <i class="fas fa-bell"></i>
         <span id="unreadCount" class="unread-badge">0</span>
@@ -19,7 +19,7 @@ if (targetElement) {
           <div class="loader-watermark"></div>
         </div>
       </div>
-    ;
+    `;
 
     // Replace the <a> element with the new <div>
     targetElement.replaceWith(newDiv);
